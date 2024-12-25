@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <h1>Invoice Generator</h1>
+    <form id="invoiceForm">
+        <nav>
+            <button type="button" onclick="document.getElementById('companyDetails').scrollIntoView();">Company Details</button>
+            <button type="button" onclick="document.getElementById('buyerDetails').scrollIntoView();">Buyer Details</button>
+            <button type="button" onclick="document.getElementById('items').scrollIntoView();">Items</button>
+        </nav>
+        <section id="companyDetails">
+            <h2>Company Details</h2>
+            <label>Company Name: <input type="text" id="companyName" required></label>
+            <label>Address: <input type="text" id="companyAddress" required></label>
+            <label>Phone: <input type="text" id="companyPhone" required></label>
+            <label>GSTIN/UIN (optional): <input type="text" id="companyGST"></label>
+        </section>
+
+        <section id="buyerDetails">
+            <h2>Buyer Details</h2>
+            <label>Buyer Name: <input type="text" id="buyerName" required></label>
+            <label>Address: <input type="text" id="buyerAddress" required></label>
+            <label>Phone: <input type="text" id="buyerPhone" required></label>
+            <label>GSTIN/UIN (optional): <input type="text" id="buyerGST"></label>
+        </section>
+
+        <section id="invoiceDetails">
+            <h2>Invoice Details</h2>
+            <label>Invoice No: <input type="text" id="invoiceNo" required></label>
+            <label>Date: <input type="date" id="invoiceDate" required></label>
+            <label>Discount (%): <input type="number" id="discount" min="0" step="0.01"></label>
+        </section>
+
+        <section id="items">
+            <h2>Items</h2>
+            <div id="items">
+                <div class="item">
+                    <label class="item-label">Item 1</label>
+                    <label>Description: <input type="text" name="description" required></label>
+                    <label>Quantity: <input type="number" name="quantity" min="1" required></label>
+                    <label>Rate: <input type="number" name="rate" min="0" step="0.01" required></label>
+                    <label>GST (%): <input type="number" name="gst" class="gst" min="0" step="0.01" required></label>
+                </div>
+            </div>
+            <button type="button" id="addItem">Add Item</button>
+            <label>Set same GST for all items: <input type="number" id="sameGstValue" min="0" step="0.01"></label>
+            <button type="button" id="setSameGst">Set GST</button>
+        </section>
+
+        <button type="button" id="generatePreview">Generate Preview</button>
+    </form>
+
+    <div id="preview" style="display:none;">
+        <h2>Invoice Preview</h2>
+        <div id="invoiceContent"></div>
+        <button id="editInvoice">Edit</button>
+        <button id="downloadPdf">Download as PDF</button>
+        <button id="printInvoice">Print</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

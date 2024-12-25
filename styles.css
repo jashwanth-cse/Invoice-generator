@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+input[type="text"], input[type="number"], select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#items .item {
+    margin-bottom: 10px;
+}
+
+#items .item .gst {
+    display: inline-block;
+    width: 100px;
+}
+
+button {
+    margin-right: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button#addItem {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button#addItem:hover {
+    background-color: #45a049;
+}
+
+button#setSameGst {
+    background-color: #2196F3;
+    color: white;
+    margin-top: 10px;
+}
+
+button#setSameGst:hover {
+    background-color: #0b7dda;
+}
+
+button#generatePreview {
+    background-color: #f39c12;
+    color: white;
+}
+
+button#generatePreview:hover {
+    background-color: #e67e22;
+}
+
+#preview {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#invoiceContent {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 210mm;
+    min-height: 297mm;
+    padding: 20mm;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    border-style: solid;
+}
+
+#invoiceContent h3 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#invoiceContent p {
+    margin: 5px 0;
+    text-align: center;
+}
+
+#invoiceContent table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#invoiceContent th, #invoiceContent td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+}
+
+#invoiceContent th {
+    background-color: #ddd;
+}
+
+#invoiceContent .total {
+    text-align: right;
+    font-weight: bold;
+}
+
+button#editInvoice, button#downloadPdf, button#printInvoice {
+    background-color: #3498db;
+    color: white;
+}
+
+button#editInvoice:hover, button#downloadPdf:hover, button#printInvoice:hover {
+    background-color: #2980b9;
+}
